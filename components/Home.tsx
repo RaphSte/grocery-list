@@ -33,7 +33,7 @@ export default function homeScreen() {
                 <>
                     <Text style={styles.marginBot} >Aktuellen einkaufszettel '{groceryListName}' bearbeiten:</Text>
                     <Button
-                        onPress={() => navigation.navigate('Notifications')}
+                        onPress={() => navigation.navigate('Groceries')}
                         title="Bearbeiten"
                         color="#094fcb"
                     />

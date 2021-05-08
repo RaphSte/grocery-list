@@ -12,6 +12,7 @@ import {Text} from "./components/Themed";
 import Home from "./components/Home";
 import EditScreenInfo from "./components/EditScreenInfo";
 import CreationDialog from "./components/CreationDialog";
+import Groceries from "./components/Groceries";
 
 
 class HomeScreen extends React.Component<{ navigation: any }> {
@@ -49,6 +50,7 @@ export default function App() {
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Notifications" component={NotificationsScreen} />
           <Drawer.Screen name="CreationDialog" component={CreationDialog} />
+          <Drawer.Screen name="Groceries" component={Groceries} />
         </Drawer.Navigator>
       </NavigationContainer>
   );

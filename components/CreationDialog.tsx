@@ -2,17 +2,20 @@ import * as React from 'react';
 import {Button, StyleSheet, TextInput} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Text, View} from '../components/Themed';
+import {testCall} from "./Firebase/firebase";
 
-
-function createAndOpenList() {
-    //TODO call firebase
-}
 
 
 function creationDialog(navigation: any) {
 
-    function getDefaultName(): String {
-        return "default-name";
+
+    function createAndOpenList() {
+        testCall(text);
+        navigation.navigate('Groceries');
+    }
+
+    function getDefaultName(): string {
+        return "default-nameeeeee";
     }
 
     const [text, onChangeText] = React.useState(getDefaultName());
@@ -21,12 +24,11 @@ function creationDialog(navigation: any) {
         <View style={styles.container}>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)"/>
             <>
-                <Text style={styles.marginBot}>Name (nicht zwingend -> default value )</Text>
+                <Text style={styles.marginBot}>Name (nicht zwingend - default value )</Text>
                 <TextInput
                     onChangeText={onChangeText}
                     style={styles.input}
-                    placeholder={text}
-                    keyboardType="numeric"
+                    placeholder={getDefaultName()}
                 />
                 <Button
                     onPress={createAndOpenList}
